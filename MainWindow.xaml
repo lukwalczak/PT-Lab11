@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel Margin="10">
+            <!-- Inputs for Newton Symbol Calculation -->
+            <TextBlock Text="Enter N:" />
+            <TextBox x:Name="NTextBox" Width="200" />
+            <TextBlock Text="Enter K:" />
+            <TextBox x:Name="KTextBox" Width="200" />
+            <Button Content="Calculate Newton Symbol" Click="CalculateNewtonButton_Click" />
 
+            <!-- Result for Newton Symbol -->
+            <TextBlock Text="Newton Symbol Result:" Margin="0,10,0,0" />
+            <TextBox x:Name="NewtonResultTextBox1" Width="200" IsReadOnly="True" />
+            <TextBox x:Name="NewtonResultTextBox2" Width="200" IsReadOnly="True" />
+            <TextBox x:Name="NewtonResultTextBox3" Width="200" IsReadOnly="True" />
+
+            <!-- Inputs for Fibonacci Calculation -->
+            <TextBlock Text="Enter i (Fibonacci Index):" Margin="0,10,0,0" />
+            <TextBox x:Name="FibonacciIndexTextBox" Width="200" />
+            <Button Content="Calculate Fibonacci" Click="CalculateFibonacciButton_Click" />
+
+            <!-- Progress bar for Fibonacci Calculation -->
+            <ProgressBar x:Name="ProgressBar" Height="20" Width="200" Margin="0,10,0,0" />
+            <TextBlock Text="Fibonacci Result:" Margin="0,10,0,0" />
+            <TextBox x:Name="FibonacciResultTextBox" Width="200" IsReadOnly="True" />
+
+            <!-- Compression Button -->
+            <Button Content="Compress Files" Click="CompressButton_Click" Margin="0,10,0,0" />
+        </StackPanel>
     </Grid>
 </Window>
